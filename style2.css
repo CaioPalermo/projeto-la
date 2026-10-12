@@ -7,18 +7,21 @@
 
 body {
   background-color: #ffd8d9;
+  background-image: url('imagem/marcapng.png');
+  height: 100vh;
+  background-size: cover;
 }
 
 /* ================= TOP BAR ================= */
-.top-bar {
-  background-color: #FFBDCB; /* Tom rosa claro de fundo */
-  padding: 10px 0;
+.barra-sup {
+  background-color: #FFBDCB; 
+  padding: 4px 0;
   font-size: 15px;
-  color: #512814; /* Tom marrom suave */
+  color: #512814; 
   border-bottom: 1px solid #ffdae2;
 }
 
-.top-bar-container {
+.barra-sup-container {
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
@@ -38,7 +41,7 @@ body {
   font-size: 15px;
 }
 
-.top-right {
+.top-sup {
   display: flex;
   align-items: center;
   gap: 20px;
@@ -55,8 +58,8 @@ body {
   justify-content: center;
   width: 23px;
   height: 23px;
-  background-color: #512814; /* Tom rosé escuro */
-  color: #ffff;
+  background-color: #512814; 
+  color: #fff;
   border-radius: 50%;
   text-decoration: none;
   font-size: 15px;
@@ -68,7 +71,7 @@ body {
 }
 
 /* ================= MAIN HEADER ================= */
-.main-header {
+.principal-header {
   background-color: #ffd8d9; 
   padding: 10px 0;
 }
@@ -80,6 +83,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 0 20px;
+
 }
 
 /* Logo */
@@ -90,7 +94,7 @@ body {
 }
 
 
-/* Navegação */
+/* ---------------------------------Navegação --------------------*/
 .nav-menu ul {
   display: flex;
   list-style: none;
@@ -145,28 +149,20 @@ body {
 
 /* Responsividade Básica */
 @media (max-width: 900px) {
-  .header-container, .top-bar-container {
+  .header-container, .barra-sup-container {
     flex-direction: column;
     gap: 15px;
     text-align: center;
   }
   
-  .top-right {
+  .top-sup  {
     flex-direction: column;
     gap: 10px;
   }
 }
 
 
-
-
-
-
-
-
-
-
-/*  RODAPÉ (FOOTER)  */
+/*  --------------------------------------------RODAPÉ (FOOTER) -------------- */
 .main-footer {
   background-color: #4a2511; 
   color: #ffffff;
@@ -187,7 +183,7 @@ body {
   font-size: 16px;
   font-weight: 700;
   margin-bottom: 20px;
-  color: #fdd2d8; /* Detalhe em rosa claro */
+  color: #fdd2d8; 
 }
 
 .footer-col p {

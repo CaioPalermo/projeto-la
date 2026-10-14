@@ -86,21 +86,29 @@ body {
 
 }
 
-/* Logo */
+ /* Logo */
 .logo img {
-  max-height: 170px;
+  max-height: 180px;
   width: auto;
   display: block;
+  margin-bottom: -50px;
+  position: relative;
+  z-index: 10;
+  filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.50));
 }
 
-
 /* ---------------------------------Navegação --------------------*/
+
 .nav-menu ul {
   display: flex;
   list-style: none;
   gap: 90px;
   flex-wrap: wrap;
   justify-content: center;
+  overflow: visible; 
+  position: relative;
+  top: 10px;
+
 }
 
 .nav-menu a {

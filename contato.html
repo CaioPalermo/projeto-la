@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato - L&A Confeitaria</title>
+  <!-- link de fonte -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Imperial+Script&display=swap" rel="stylesheet">
+  <!-- icone -->  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="contato.css">
+</head>
+<body>
+    
+<!-- Barra Superior (Top Bar) -->
+  <div class="barra-sup">
+    <div class="barra-sup-container">
+      <div class="contact-info">
+        <a href="https://wa.me/5511900000000" target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        Faça seu pedido: (11) 90000-0000
+      </div>
+      <div class="top-sup">
+        <div class="social-icons">
+          <a href="https://www.instagram.com/l_a_bolosedoces?igsi=NGp2OWJ4Z24zaGNp"><i class="fa-brands fa-instagram"></i></a>
+          
+          <a href="https://www.tiktok.com/404?fromUrl=/l&adoces"><i class="fa-brands fa-tiktok"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!---------------------------- Cabeçalho/header Principal-->
+  <header class="principal-header">
+    <div class="header-container">
+      <!-- Logótipo -->
+      <div class="logo">
+        <a href="index.html">  
+          <img src="imagem/logotipo2.png" alt="Logomarca">
+        </a> 
+      </div>
+
+  <!---------------------------- Navegação da sua aplicação -->
+      <!-- Menu de Navegação -->
+      <nav class="nav-menu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html">Sobre</a></li>
+          <li><a href="produtos.html">Produtos</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+
+            <!-- Botões de Ação (CTA) -->
+      <div class="header-buttons">
+        <a href="#" class="btn btn-primary">Encomende<br>agora</a>
+      </div>
+    </div>
+  </header>
+<!------------------------------- DAQUI PRA BAIXO É DO FORMULARIO -->
+  <!-- Banner do Título da Página -->
+  <section class="banner-titulo">
+    <h1 class="titulo-principal">Contato</h1>
+  </section>
+
+  <!-- Conteúdo Principal -->
+  <main class="conteiner-principal">
+    <div class="grade-conteudo">
+      
+      <!-- Coluna da Esquerda: Fale Conosco -->
+      <section class="secao-informacoes">
+        <div class="subtitulo-manuscrito">Fale conosco</div>
+        <h2 class="titulo-secao">Estamos aqui para atendê-lo!</h2>
+        
+        <p class="texto-descricao">
+          Nossa equipe está à disposição para atender suas dúvidas, sugestões e pedidos. Você pode nos contatar por telefone, e-mail ou através das nossas redes sociais. Se preferir, preencha o formulário. Estamos ansiosos para ouvir de você e tornar seus momentos especiais ainda mais doces.
+        </p>
+
+        <div class="lista-contatos">
+          <!-- WhatsApp / Telefone -->
+          <div class="item-contato">
+            <div class="icone-contato">
+              <i class="fa-brands fa-whatsapp"></i>
+            </div>
+            <div class="texto-item">
+              <strong>(11) 90000-0000</strong>
+              <span>Ligue ou chame no WhatsApp.</span>
+            </div>
+          </div>
+
+          <!-- E-mail -->
+          <div class="item-contato">
+            <div class="icone-contato">
+              <i class="fa-regular fa-envelope"></i>
+            </div>
+            <div class="texto-item">
+              <strong>contato@labrasil.com.br</strong>
+              <span>Envie-nos um e-mail.</span>
+            </div>
+          </div>
+
+        <hr class="linha-divisora">
+
+        <!-- Redes Sociais -->
+        <div class="secao-redes-sociais">
+          <span class="titulo-redes">Conecte-se conosco</span>
+          <div class="icones-redes">
+            <a href="https://www.instagram.com/l_a_bolosedoces?igsi=NGp2OWJ4Z24zaGNp" class="botao-rede-social" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            
+            <a href="https://www.tiktok.com/404?fromUrl=/l&adoces" class="botao-rede-social" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Coluna da Direita: Formulário de Mensagem -->
+      <section class="secao-formulario">
+        <h2 class="titulo-secao">Envie-nos uma mensagem!</h2>
+        
+        <form class="formulario-contato" action="#" method="POST">
+          <!-- Campo Nome -->
+          <div class="grupo-campo">
+            <label for="nome">Nome <span class="campo-obrigatorio">*</span></label>
+            <input type="text" id="nome" name="nome" class="campo-texto" placeholder="Nome" required>
+          </div>
+
+          <!-- Campos Telefone e E-mail em Linha -->
+          <div class="linha-campos">
+            <div class="grupo-campo">
+              <label for="telefone">Telefone <span class="campo-obrigatorio">*</span></label>
+              <input type="tel" id="telefone" name="telefone" class="campo-texto" placeholder="Telefone" required>
+            </div>
+            <div class="grupo-campo">
+              <label for="email">E-mail <span class="campo-obrigatorio">*</span></label>
+              <input type="email" id="email" name="email" class="campo-texto" placeholder="E-mail" required>
+            </div>
+          </div>
+
+          <!-- Campo Mensagem -->
+          <div class="grupo-campo">
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" class="campo-texto area-mensagem" placeholder="Mensagem"></textarea>
+          </div>
+
+          <!-- Botão Submeter -->
+          <button type="submit" class="botao-enviar">Enviar mensagem</button>
+        </form>
+      </section>
+
+    </div>
+  </main>
+<!-------------------------------- Rodapé (Footer) ------------------------------------->
+<footer class="main-footer">
+  <div class="footer-container">
+    
+    <!-- Coluna Logo e Descrição -->
+    <div class="footer-col footer-about">
+      <img src="imagem/logotipo2.png" alt="minhalogo" class="footer-logo">
+      <p>Bolos personalizados e doces artesanais feitos com carinho para adoçar seus melhores momentos.</p>
+    </div>
+
+    <!-- Coluna Links Rápidos -->
+    <div class="footer-col">
+      <h4>Navegação</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html">Sobre Nós</a></li>
+        <li><a href="produtos.html">Produtos</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </div>
+
+    <!-- Coluna 3: Contato -->
+    <div class="footer-col">
+      <h4>Contato</h4>
+      <p><i class="fa-solid fa-phone"></i> (11) 90000-0000</p>
+      <p><i class="fa-solid fa-envelope"></i> contato@labrasil.com.br</p>
+      <p><i class="fa-solid fa-location-dot"></i> São Paulo, SP</p>
+    </div>
+
+    <!-- Coluna 4: Redes Sociais -->
+    <div class="footer-col">
+      <h4>Siga-nos</h4>
+      <div class="footer-socials">
+        <a href="https://www.instagram.com/l_a_bolosedoces?igsi=NGp2OWJ4Z24zaGNp"><i class="fa-brands fa-instagram"></i></a>
+
+        <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Faixa de Direitos Autorais -->
+  <div class="footer-bottom">
+    <p>&copy; L&A confeitaria. Todos os direitos reservados.</p>
+  </div>
+</footer>
+</body>
+</html>

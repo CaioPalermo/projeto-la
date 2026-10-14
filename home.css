@@ -10,6 +10,7 @@ body {
   background-image: url('imagem/marcapng.png');
   height: 100vh;
   background-size: cover;
+
 }
 
 /* ================= CABEÇALHO (TOP BAR) ================= */
@@ -85,22 +86,29 @@ body {
   padding: 0 20px;
 
 }
-
-/* Logo */
+ /* Logo */
 .logo img {
-  max-height: 170px;
+  max-height: 180px;
   width: auto;
   display: block;
+  margin-bottom: -50px;
+  position: relative;
+  z-index: 10;
+  filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.50));
 }
 
-
 /* ---------------------------------Navegação --------------------*/
+
 .nav-menu ul {
   display: flex;
   list-style: none;
   gap: 90px;
   flex-wrap: wrap;
   justify-content: center;
+  overflow: visible; 
+  position: relative;
+  top: 10px;
+
 }
 
 .nav-menu a {
@@ -304,7 +312,7 @@ body {
 /* Importação fonte para o subtítulo */
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap');
 
-/* Secção Sobre */
+/* Seção Sobre */
 .texto-section {
   width: 100%;
   padding: 60px 20px;
@@ -344,6 +352,7 @@ body {
   color: #be596d; /* Cor tom rosé/pastelo */
   display: block;
   margin-bottom: 5px;
+  text-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
 }
 
 .texto-title {
@@ -353,6 +362,7 @@ body {
   color: #361600;
   line-height: 1.3;
   margin-bottom: 20px;
+  
 }
 
 .texto-description {

@@ -1,3 +1,6 @@
+html {
+  scroll-behavior: smooth;
+}
 :root {
   --cor-fundo-pagina: #512814;
   --cor-rosa-principal: #512814;

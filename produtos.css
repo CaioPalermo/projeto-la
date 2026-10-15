@@ -1,18 +1,14 @@
-* {
+ html {
+  scroll-behavior: smooth;
+}
+body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
-}
-
-body {
+  color: #4a4a4a;
   background-color: #ffd8d9;
-  background-image: url('imagem/marcapng.png');
-  height: 100vh;
-  background-size: cover;
 }
 
-/* ================= TOP BAR ================= */
+/* ================= CABEÇALHO (TOP BAR) ================= */
 .barra-sup {
   background-color: #FFBDCB; 
   padding: 4px 0;
@@ -108,7 +104,6 @@ body {
   overflow: visible; 
   position: relative;
   top: 10px;
-
 }
 
 .nav-menu a {
@@ -169,6 +164,171 @@ body {
   }
 }
 
+
+/* ===================================================
+   CABEÇALHO
+   =================================================== */
+.cabecalho-topo {
+  background-image: url(imagem/produto.jpg) ;
+  background-size: 100% auto;
+  text-align: center;
+  padding: 40px 20px 60px;
+  color: #ffffff;
+}
+
+.titulo-principal {
+  font-family: imperial script, cursive;
+  font-size: 5.5rem;
+  color: var(--cor-texto-claro);
+  margin-bottom: 10px;
+  font-weight: 600;
+  text-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
+}
+
+
+/* ===================================================
+   SEÇÃO DE INTRODUÇÃO
+   =================================================== */
+.secao-introducao {
+  text-align: center;
+  max-width: 800px;
+  margin: 40px auto 20px auto;
+  padding: 0 20px;
+}
+
+.secao-introducao .subtitulo {
+  display: block;
+  font-family: 'Imperial Script', cursive;
+  color: #512814;
+  font-size: 5rem;
+  margin-bottom: 10px;
+  text-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+}
+
+.secao-introducao h2 {
+   font-family:'Sans-serif';
+  font-size: 1.8rem;
+  color: #512814;
+  margin-bottom: 15px;
+}
+
+.secao-introducao p {
+   font-family:'Sans-serif';
+  line-height: 1.8;
+  color: #b08585;
+  font-size: 0.95rem;
+}
+
+.botao-encomenda {
+  display: inline-block;
+  background-color: #512814;
+  color: #ffffff;
+  padding: 12px 28px;
+  border-radius: 6px;
+  text-decoration: none;
+  margin-top: 20px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.botao-encomenda:hover {
+  background-color: #b08585;
+}
+
+/* ===================================================
+   CATEGORIAS
+   =================================================== */
+.categorias {
+  background-color: #512814;
+  padding: 10px;
+  display: flex;
+  justify-content:space-evenly;
+  gap: 20px;
+  margin: 30px 0;
+  box-shadow: 0 0 10px #333333;
+}
+
+.categorias a {
+  text-decoration: none;
+  color: #ffd8d9;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+.categorias a:hover {
+  color: #4d4c4c70;
+}
+
+/* ===================================================
+   GRADE DE PRODUTOS
+   =================================================== */
+/* Secções de Categorias */
+.seccao-categoria {
+  max-width: 1000px;
+  margin: 0 auto 60px auto;
+  padding-top: 20px; /* Garante margem adequada no rolamento suave */
+}
+
+.titulo-categoria {
+  color: #361400;
+  font-size: 1.5rem;
+  font-weight: normal;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+/* Grelha de Produtos (3 colunas iguais) */
+.grade-produtos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Cartão do Produto */
+.cartao-produto {
+  position: relative;
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  aspect-ratio: 4 / 3;
+}
+
+.cartao-produto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Faixa castanha na base da imagem */
+.faixa-nome {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #512814;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.faixa-nome h3 {
+  margin: 0;
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  color: #ffd8d9; /* Texto em tom bege/castanho claro */
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+/* Ajuste Responsivo para ecrãs pequenos / telemóveis */
+@media (max-width: 768px) {
+  .grade-produtos {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
 
 /*  --------------------------------------------RODAPÉ (FOOTER) -------------- */
 .main-footer {

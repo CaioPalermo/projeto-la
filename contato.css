@@ -113,7 +113,11 @@ header, .principal-header {
   filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.50));
   
 }
-
+@media (max-width:900px){
+  .logo, .logo img {
+    height: 180px;
+  }
+}
 /* ---------------------------------Navegação --------------------*/
 
 .nav-menu {
@@ -188,6 +192,14 @@ header, .principal-header {
     flex-direction: column;
     gap: 10px;
   }
+  
+ .nav-menu, .nav-menu a, .nav-menu ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+ }
+
 }
 
 

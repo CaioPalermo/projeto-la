@@ -103,7 +103,11 @@ header, .principal-header {
   filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.50));
   
 }
-
+@media (max-width:900px){
+  .logo, .logo img {
+    height: 180px;
+  }
+}
 /* ---------------------------------Navegação --------------------*/
 
 .nav-menu {
@@ -178,6 +182,14 @@ header, .principal-header {
     flex-direction: column;
     gap: 10px;
   }
+  
+ .nav-menu, .nav-menu a, .nav-menu ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+ }
+
 }
 
 /* ===================================================
@@ -199,6 +211,11 @@ header, .principal-header {
   margin-bottom: 10px;
   font-weight: 600;
   text-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
+}
+@media (max-width: 900px){
+  .cabecalho-topo{
+   padding: 10px;
+  }
 }
 
 
@@ -267,7 +284,7 @@ header, .principal-header {
 
 /* Grid de Integrantes */
 .equipe-grid {
- display: grid;
+    display: grid;
     grid-template-columns: repeat(3, 1fr); 
     justify-items: center; 
     gap: 40px;
@@ -320,22 +337,18 @@ header, .principal-header {
 }
 
 /* Responsividade para telas menores */
-@media (max-width: 600px) {
+@media (max-width: 900px) {
     .equipe-grid {
-        gap: 25px;
+        gap: 10px;
     }
     
     .time-card {
-        width: 140px;
+        width: 40px;
     }
 
     .avatar-edit {
         width: 110px;
         height: 110px;
-    }
-
-    .membro-nome {
-        font-size: 1rem;
     }
 
     .membro-nome {

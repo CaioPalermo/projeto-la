@@ -4,12 +4,21 @@ const containerReceitas = document.getElementById('container-receitas');
 
 // Função para buscar receitas na TheMealDB por termo de pesquisa
 async function buscarReceitas(termo) {
-  if (!termo.trim()) return;
+  if (!termo || !termo.trim()) {
+    containerReceitas.innerHTML = '<p style="color: #777;">Digite um termo em inglês (ex: Cake, Pie, Chocolate) e clique em Pesquisar.</p>';
+    return;
+  }
 
   containerReceitas.innerHTML = '<p>Buscando receitas...</p>';
 
   try {
-    const resposta = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${encodeURIComponent(termo)}`);
+    const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${encodeURIComponent(termo.trim())}`;
+    const resposta = await fetch(url);
+    
+    if (!resposta.ok) {
+      throw new Error(`Erro HTTP: ${resposta.status}`);
+    }
+
     const dados = await resposta.json();
 
     containerReceitas.innerHTML = '';
@@ -24,19 +33,49 @@ async function buscarReceitas(termo) {
     dados.meals.forEach(prato => {
       const card = document.createElement('div');
       card.classList.add('card-receita');
+      card.style.cursor = 'pointer';
 
       card.innerHTML = `
         <img src="${prato.strMealThumb}" alt="${prato.strMeal}">
         <h3>${prato.strMeal}</h3>
       `;
 
+      // Ao clicar, exibe os ingredientes e modo de preparo
+      card.addEventListener('click', () => {
+        exibirReceitaCompleta(prato);
+      });
+
       containerReceitas.appendChild(card);
     });
 
   } catch (erro) {
-    containerReceitas.innerHTML = '<p>Erro ao buscar receitas. Tente novamente.</p>';
+    containerReceitas.innerHTML = '<p style="color: #c62828;">Erro ao buscar receitas. Se estiver abrindo o HTML direto do computador, tente usar um servidor local (Live Server) ou verifique sua conexão.</p>';
     console.error('Erro na requisição:', erro);
   }
+}
+
+// Exibe a receita completa num alert ao clicar no card
+function exibirReceitaCompleta(prato) {
+  let ingredientes = [];
+
+  for (let i = 1; i <= 20; i++) {
+    const ingrediente = prato[`strIngredient${i}`];
+    const medida = prato[`strMeasure${i}`];
+
+    if (ingrediente && ingrediente.trim() !== '') {
+      ingredientes.push(`${ingrediente} (${medida || ''})`);
+    }
+  }
+
+  alert(`
+📖 RECEITA: ${prato.strMeal}
+
+🛒 INGREDIENTES:
+- ${ingredientes.join('\n- ')}
+
+👨‍🍳 MODO DE PREPARO:
+${prato.strInstructions}
+  `);
 }
 
 // Evento ao clicar no botão
@@ -51,5 +90,5 @@ inputBusca.addEventListener('keypress', (e) => {
   }
 });
 
-// Carrega receitas de bolo padrão ("Cake") ao abrir a página
-buscarReceitas('Cake');
+// Mensagem inicial simples sem requisição automática para não travar
+containerReceitas.innerHTML = '<p style="color: #666;">Digite uma receita em inglês acima (ex: Cake) e clique em Pesquisar!</p>';

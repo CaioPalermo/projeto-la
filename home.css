@@ -369,9 +369,9 @@ header, .principal-header {
 }
 
 .texto-subtitle {
-  font-family: 'Milton one';
-  font-size: 85px;
-  color: #be596d; /* Cor tom rosé/pastelo */
+  font-family:  'Imperial Script', cursive;
+  font-size: 65px;
+  color: #be596d; 
   display: block;
   margin-bottom: 5px;
   text-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);

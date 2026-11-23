@@ -5,7 +5,7 @@ const containerReceitas = document.getElementById('container-receitas');
 // Função para buscar receitas na TheMealDB por termo de pesquisa
 async function buscarReceitas(termo) {
   if (!termo || !termo.trim()) {
-    containerReceitas.innerHTML = '<p style="color: #777;">Digite um termo em inglês (ex: Cake, Pie, Chocolate) e clique em Pesquisar.</p>';
+    containerReceitas.innerHTML = '<p style="color: #777;">Digite um termo em inglês (ex: "Cake", "Chocolate","Pie", "Cookies" ou "Squares") e clique em Pesquisar.</p>';
     return;
   }
 
@@ -25,7 +25,7 @@ async function buscarReceitas(termo) {
 
     // Se não encontrar nenhuma receita com esse nome
     if (!dados.meals) {
-      containerReceitas.innerHTML = '<p>Nenhuma receita encontrada. Tente termos em inglês como "Cake", "Chocolate" ou "Pie".</p>';
+      containerReceitas.innerHTML = '<p>Nenhuma receita encontrada. Tente termos em inglês como "Cake", "Chocolate","Pie", "Cookies" ou "Squares".</p>';
       return;
     }
 
@@ -91,4 +91,4 @@ inputBusca.addEventListener('keypress', (e) => {
 });
 
 // Mensagem inicial simples sem requisição automática para não travar
-containerReceitas.innerHTML = '<p style="color: #666;">Digite uma receita em inglês acima (ex: Cake) e clique em Pesquisar!</p>';
+containerReceitas.innerHTML = '<p style="color: #666;">Digite uma receita em inglês acima (ex: "Cake", "Chocolate","Pie", "Cookies" ou "Squares") e clique em Pesquisar!</p>';

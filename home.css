@@ -329,7 +329,6 @@ header, .principal-header {
   }
 }
 
-
 /* ---------------------------------------meio------------------------- */
 /* Importação fonte para o subtítulo */
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap');
@@ -461,6 +460,169 @@ header, .principal-header {
     grid-template-columns: 1fr;
   }
 }
+
+/*ESTILOS: FACHADA E LINHA DO TEMPO */
+
+#historia-visual {
+  background-color: #ffd8d9;
+  padding: 60px 20px 90px 20px;
+  font-family: 'Sans-serif';
+  color: #361600;
+  text-align: center;
+}
+
+.container-historia {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Títulos */
+.titulo-cursivo {
+  font-family: 'Imperial Script', cursive;
+  font-size: 90px;
+  color: #B85A6D; /* Rosa queimado */
+  margin-bottom: 5px;
+  font-weight: normal;
+  text-shadow: 1px 1px 2px rgba(74, 37, 17, 0.1);
+}
+
+.subtitulo-historia {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #4A2511;
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+
+/* --- SEÇÃO DA FACHADA --- */
+.bloco-fachada {
+  margin-bottom: 80px;
+}
+
+.moldura-fachada {
+  max-width: 900px;
+  margin: 0 auto;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(74, 37, 17, 0.15);
+  border: 4px solid #ffffff;
+}
+
+.imagem-fachada {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.moldura-fachada:hover .imagem-fachada {
+  transform: scale(1.02);
+}
+
+/* --- SEÇÃO DA LINHA DO TEMPO --- */
+.linha-tempo-wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  position: relative;
+  margin-top: 40px;
+  gap: 15px;
+}
+
+.item-linha-tempo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  padding: 0 10px;
+}
+
+/* Etiqueta do Ano */
+.ano-marca {
+  background-color: #B85A6D;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 0.95rem;
+  padding: 6px 18px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(184, 90, 109, 0.3);
+}
+
+.destaque-ano {
+  background-color: #4A2511; /* Marrom escuro para destacar o momento atual */
+}
+
+.imagem-logo-historico {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.logo-atual{
+    height: 260px ;
+}
+
+/* Textos das Etapas */
+.titulo-etapa {
+  font-size: 1.2rem;
+  color: #4A2511;
+  margin: 0 0 8px 0;
+  font-weight: 700;
+}
+
+.descricao-etapa {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #5c3a28;
+  max-width: 260px;
+  margin: 0;
+}
+
+/* Linha conectora entre os logos */
+.conector-linha {
+  flex: 0.4;
+  height: 3px;
+  background: repeating-linear-gradient(
+    to right,
+    #B85A6D 0,
+    #B85A6D 8px,
+    transparent 8px,
+    transparent 16px
+  );
+  margin-top: 130px; /* Alinha exatamente no meio dos círculos */
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+  .linha-tempo-wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .conector-linha {
+    width: 3px;
+    height: 40px;
+    margin-top: 0;
+    margin-bottom: 10px;
+    background: repeating-linear-gradient(
+      to bottom,
+      #B85A6D 0,
+      #B85A6D 8px,
+      transparent 8px,
+      transparent 16px
+    );
+  }
+
+  .titulo-cursivo {
+    font-size: 2.4rem;
+  }
+}
+
 /* -------------------------------------------------------- finalização----------------- */
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap');
 

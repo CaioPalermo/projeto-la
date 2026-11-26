@@ -192,9 +192,7 @@ header, .principal-header {
 
 }
 
-/* ===================================================
-   CABEÇALHO
-   ================================================ === */
+/* ========= CABEÇALHO*/  
 .cabecalho-topo {
   background-image: url(imagem/ban.jpg); 
   background-size: 100%;
@@ -217,11 +215,7 @@ header, .principal-header {
    padding: 10px;
   }
 }
-
-
-/* ===================================================
-   SEÇÃO DE INTRODUÇÃO
-   =================================================== */
+/* --------------------------------SEÇÃO DE INTRODUÇÃO */
 .secao-introducao {
   text-align: center;
   max-width: 800px;
@@ -321,7 +315,6 @@ header, .principal-header {
     display: block;
 }
 
-/* Textos (Nome e Função) */
 .membro-nome {
     font-size: 1.15rem;
     font-weight: 600;
@@ -336,7 +329,6 @@ header, .principal-header {
   
 }
 
-/* Responsividade para telas menores */
 @media (max-width: 900px) {
     .equipe-grid {
         gap: 10px;
@@ -355,8 +347,6 @@ header, .principal-header {
         font-size: 0.85rem;
     }
 }
-
-
 /*  --------------------------------------------RODAPÉ (FOOTER) -------------- */
 .main-footer {
   background-color: #4a2511; 

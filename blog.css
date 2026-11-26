@@ -10,7 +10,6 @@
 
 body {
   background-color: #ffd8d9;
-
   height: 100vh;
   background-size: cover;
 
@@ -297,7 +296,7 @@ header, .principal-header {
 }
 
 .pesquisa-container button {
-  background-color: #3b1908; /* Tom marrom do seu menu */
+  background-color: #3b1908; 
   color: #ffffff;
   border: none;
   padding: 12px 25px;
@@ -340,19 +339,6 @@ header, .principal-header {
   font-size: 1.1rem;
   margin-top: 12px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*  --------------------------------------------RODAPÉ (FOOTER) -------------- */
 .main-footer {
   background-color: #4a2511; 
